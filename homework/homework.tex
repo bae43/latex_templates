@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+
+\usepackage{homework}
+
+%%%%%%
+%Ornament Pacakages
+\usepackage[object=vectorian]{pgfornament}
+\usepackage{lmodern}   
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{adforn}
+\usepackage{lmodern}
+\pdfmapfile{+ OrnementsADF.map}
+\usepackage{adforn}
+%%%%%%%
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usepackage{tikzrput}
+
+\usepackage{listings}
+\usepackage{synttree}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\coursename}{ Name  }
+\newcommand{\coursenumber}{ CS 9999  }
+\newcommand{\name}{ Bryce Evans  }
+\newcommand{\netid}{ bae43  }
+%\renewcommand{\today}{   January 1st, 2000  }
+\newcommand{\hwnum}{ 1 }
+\newcommand{\hwtitle}{ First Homework }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\adforn{34} \coursenumber HW\hwnum: \textit{\hwtitle}}
+\fancyhead[R]{\name - \netid}
+
+\fancyfoot[C]{$\quad  \quad \quad \quad \quad \quad \quad \, \, \, \, \,$ --~\thepage~--}
+
+%block style
+\setlength\parindent{0pt}
+
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{.125in}
+\setlength{\textwidth}{6.25in}
+
+\begin{document}
+
+\maketitle
+
+
+\section{First Section}
+
+\end{document}

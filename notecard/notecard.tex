@@ -1,0 +1,257 @@
+
+\documentclass{article}
+
+%\usepackage[cam,width=4truein,height=6truein,letter,center]{crop}
+\usepackage[T1]{fontenc}
+\usepackage{calligra}
+\usepackage{setspace}
+\usepackage{anysize}
+\usepackage{CJKutf8}
+% l r t b
+% NOP \marginsize{-1in}{-1in}{-1in}{-1in}
+
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage{tikzrput}
+\usetikzlibrary{decorations,decorations.text}
+\usepackage{comment}
+\usepackage{multicol}
+
+\usepackage{adforn}
+\usepackage{tikzrput}
+\usepackage{lmodern}
+\usepackage{indentfirst}
+\usepackage[object=vectorian]{pgfornament}   
+\usetikzlibrary{shapes.geometric,calc}
+
+%% super hacky - random guessing until it worked
+\setlength{\topmargin}{0in}
+\setlength{\leftmargin}{0in}
+\setlength{\rightmargin}{0in}
+% controls how far boxes are apart
+%width
+\setlength{\textheight}{8.75in}
+\setlength{\oddsidemargin}{0in}
+%height
+\setlength{\textwidth}{11in}
+
+% shift up
+\addtolength{\hoffset}{-2.75in}
+%shift right (negative left)
+\addtolength{\voffset}{-1.05in}
+
+
+%\newflowframe{.45\textwidth}{.45\textheight}{0pt}{.55\textheight}
+%\newflowframe{.45\textwidth}{.45\textheight}{.55\textwidth}{.55\textheight}
+%\newflowframe{.45\textwidth}{.45\textheight}{0pt}{0pt}
+%\newflowframe{.45\textwidth}{.45\textheight}{.55\textwidth}{0pt}
+
+
+
+
+
+\makeatletter
+\newcommand{\adfornset}{%
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75}
+\newcommand{\adfornshow}{%
+	\def\tempa{75}%
+	\@for \xx:=\adfornset \do {%
+		\ifx\xx\tempa
+			\xx: \adforn{\xx}%
+		\else
+			\xx: \adforn{\xx}\\%
+		\fi}}
+\makeatother
+
+\pdfmapfile{+ OrnementsADF.map}
+\usepackage{adforn}
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\newcommand{\framesize}{3in}
+\newcommand{\innercellwidth}{5.7in}
+\begin{landscape}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\fbox{\begin{minipage}[t][1.5in][t]{5in}
+\end{minipage}}%
+		
+		%%%%%%%%%%%%%%%%%%%%%%% TOP BACK COVER
+		
+		\hspace{-0.85in}	\begin{turn}{180} %
+		\begin{minipage}[t][4in][t]{5.25in}
+			\begin{center}
+				
+\begin{tikzpicture}[transform shape,
+every node/.style={inner sep=0pt}]
+\node[minimum width=\innercellwidth, minimum height = 2.25in](vecbox){};
+\node[anchor=north west] at (vecbox.north west){%
+\pgfornament[width=0.2*\framesize]{41}};
+\node[anchor=north east] at (vecbox.north east){%
+\pgfornament[width=0.2*\framesize,symmetry=v]{41}};
+
+\node[inner sep=6pt] (text) at (vecbox.center){%
+\begin{minipage}{0.80\textwidth}
+\begin{center}
+
+\end{center}
+\end{minipage}
+};
+
+\end{tikzpicture}
+
+			\end{center}
+		\end{minipage}
+	\end{turn}
+\end{multicols}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%% MAIN CONTENT
+\begin{multicols}{2}
+\hspace{-2.6in}\begin{minipage}[t][3in][t]{5.25in}
+			
+			
+			\begin{tikzpicture}[transform shape,
+every node/.style={inner sep=0pt}]
+\node[minimum width=\innercellwidth, minimum height = 3.75in](vecbox){};
+\node[anchor=north west] at (vecbox.north west){%
+\pgfornament[width=0.2*\framesize]{41}};
+\node[anchor=north east] at (vecbox.north east){%
+\pgfornament[width=0.2*\framesize,symmetry=v]{41}};
+\node[anchor=south west] at (vecbox.south west){%
+\pgfornament[width=0.2*\framesize,symmetry=h]{41}};
+\node[anchor=south east] at (vecbox.south east){%
+\pgfornament[width=0.2*\framesize,symmetry=c]{41}};
+
+\node[anchor=north,rotate=90] at (vecbox.west){%
+\pgfornament[width=0.4*\framesize,symmetry=h]{46}};
+\node[anchor=north,rotate=-90] at (vecbox.east){%
+\pgfornament[width=0.4*\framesize,symmetry=h]{46}};
+\node[inner sep=6pt] (text) at (vecbox.center){%
+    \begin{minipage}{0.50\textwidth}
+\begin{center}
+
+\vspace{2mm}
+			\textit{Join us for the \textbf{101st birthday} of }\\
+\vspace{5mm}
+\textbf{\huge Charlie Brown} \\
+\vspace{5mm}
+%\textit{in the evening at 6:30 p.m}\\
+\textit{Tuesday, Nov. 12, 2013, 6:30 p.m.}\\
+\vspace{5mm}
+\textit{at}\\
+\textsc{\Large Mahogany Grill}\\
+
+\vspace{5mm}
+
+\textit{Casual Attire}\\
+RSVP:	123-456-7890
+\vspace{2mm}
+\end{center}
+    \end{minipage}
+};
+\node[anchor=north] at (text.south){%
+
+% top and bottom center
+\pgfornament[width=0.5*\framesize]{75}};
+\node[anchor=south] at (text.north){%
+\pgfornament[width=0.5*\framesize,symmetry=h]{75}};
+\end{tikzpicture}
+
+
+		\end{minipage}%
+		
+		%%%%%%%%%%%%%%%%%%%%%%% BACK COVER
+		
+		\hspace{-1.25in}\begin{minipage}[t][3in][t]{5.25in}
+			
+			
+				
+\begin{tikzpicture}[transform shape,
+every node/.style={inner sep=0pt}]
+\node[minimum width=\innercellwidth, minimum height = 3.75in](vecbox){};
+\node[anchor=north west] at (vecbox.north west){%
+\pgfornament[width=0.2*\framesize]{41}};
+\node[anchor=north east] at (vecbox.north east){%
+\pgfornament[width=0.2*\framesize,symmetry=v]{41}};
+\node[anchor=south west] at (vecbox.south west){%
+\pgfornament[width=0.2*\framesize,symmetry=h]{41}};
+\node[anchor=south east] at (vecbox.south east){%
+\pgfornament[width=0.2*\framesize,symmetry=c]{41}};
+\node[inner sep=6pt] (text) at (vecbox.center){%
+\begin{minipage}{0.80\textwidth}
+\begin{center}
+\begin{center}
+
+\vspace{1in}
+% person guest
+\begin{CJK*}{UTF8}{gbsn}
+\Huge Linus van Pelt
+\end{CJK*}
+
+
+\pgfornament[scale=.5]{88}
+\end{center}
+
+
+\end{center}
+\end{minipage}
+};
+
+\end{tikzpicture}
+
+
+		\end{minipage}%
+		\end{multicols}
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% bottom 2 cells
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\vspace{-.25in}
+
+\begin{multicols}{2}
+
+\hspace{-2in}\begin{minipage}[t][1.5in][t]{5.25in}
+			
+
+
+		\end{minipage}%
+		
+		%%%%%%%%%%%%%%%%%%%%%%% BACK COVER
+		
+		\hspace{-1.25in}\begin{minipage}[t][1.5in][t]{5.25in}
+			
+			
+				
+\begin{tikzpicture}[transform shape,
+every node/.style={inner sep=0pt}]
+\node[minimum width=\innercellwidth, minimum height = 1.5in](vecbox){};
+\node[anchor=north west] at (vecbox.north west){%
+\pgfornament[width=0.2*\framesize]{41}};
+\node[anchor=north east] at (vecbox.north east){%
+\pgfornament[width=0.2*\framesize,symmetry=v]{41}};
+
+
+\node[inner sep=6pt] (text) at (vecbox.center){%
+\begin{minipage}{0.80\textwidth}
+
+\end{minipage}
+};
+
+\end{tikzpicture}
+\end{minipage}%
+\end{multicols}
+	
+	
+
+\end{landscape}
+\end{document}
